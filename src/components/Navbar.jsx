@@ -5,14 +5,15 @@ import { FaLinkedin, FaGithub, FaSquareXTwitter, FaInstagram } from "react-icons
 const Navbar = () => {
   return (
     <nav className="mb-20 flex items-center justify-between py-6">
-      {/* Logo with Animation */}
+      {/* Logo with Hover Animation */}
       <motion.div 
-        className="flex flex-shrink-0 items-center "
+        className="flex flex-shrink-0 items-center"
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 1, }}
+        whileHover={{ rotate: 350 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <img className="mx-2 w-10 " src={Logo} alt="logo" />
+        <img className="mx-2 w-10" src={Logo} alt="logo" />
       </motion.div>
 
       {/* Social Media Icons */}
@@ -40,4 +41,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
